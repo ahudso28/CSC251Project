@@ -2,7 +2,7 @@ import java.lang.Math;
 public class Policy
 {
    private int policyNumber;
-   private String providerName;
+   private String providersName;
    private String policyholdersFirstName;
    private String policyholdersLastName;
    private int policyholdersAge;
@@ -13,7 +13,7 @@ public class Policy
    public Policy()
    {
       policyNumber = 0;
-      providerName = "";
+      providersName = "";
       policyholdersFirstName = "";
       policyholdersLastName = "";
       policyholdersAge = 0;
@@ -25,7 +25,7 @@ public class Policy
    public Policy(int pNu, String pNa, String pFN, String pLN, int pA, String pSS, double pH, double pW)
    {
       policyNumber = pNu;
-      providerName = pNa;
+      providersName = pNa;
       policyholdersFirstName = pFN;
       policyholdersLastName = pLN;
       policyholdersAge = pA;
@@ -39,9 +39,9 @@ public class Policy
       policyNumber = pNu;
    }
    
-   public void setProviderName(String pNa)
+   public void setProvidersName(String pNa)
    {
-      providerName = pNa;
+      providersName = pNa;
    }
    
    public void setPolicyholdersFirstName(String pFN)
@@ -79,9 +79,9 @@ public class Policy
       return policyNumber;
    }
    
-   public String getProviderName()
+   public String getProvidersName()
    {
-      return providerName;
+      return providersName;
    }
    
    public String getPolicyholdersFirstName()
