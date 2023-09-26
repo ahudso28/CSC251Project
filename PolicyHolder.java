@@ -41,6 +41,8 @@ public class PolicyHolder
    }
    
    /**
+      Copy-Constructor to avoid security holes.
+      @param pH The object to copy.
    */
    public PolicyHolder(PolicyHolder pH)
    {
@@ -195,5 +197,27 @@ public class PolicyHolder
       }
       
       return calculatedFee;
+   }
+   
+   public String toString()
+   {
+      return String.format(
+          "Policyholder's First Name: %s" + 
+          "\nPolicyholder's Last Name: %s" + 
+          "\nPolicyholder's Age: %d" +
+          "\nPolicyholder's Smoking Status: %s" + 
+          "\nPolicyholder's Height: %.1f inches" +
+          "\nPolicyholder's Weight: %.1f pounds" +
+          "\nPolicyholder's BMI: %.2f" +
+          "\nPolicy Price: $%.2f",
+          policyholdersFirstName,
+          policyholdersLastName,
+          policyholdersAge,
+          policyholdersSmokingStatus,
+          policyholdersHeight,
+          policyholdersWeight,
+          calculateBMI(),
+          calculatePrice()
+      );
    }
 }

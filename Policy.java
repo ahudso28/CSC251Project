@@ -80,4 +80,16 @@ public class Policy
    {
       return policyHolder;
    }
+   
+   public String toString()
+   {
+      return String.format(
+         "Policy Number: %d" + 
+         "\nProvider's Name: %s" + 
+         "\n%s",
+         policyNumber,
+         providersName,
+         policyHolder.toString()
+      );
+   }
 }
